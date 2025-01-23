@@ -106,20 +106,26 @@ img {
 }
 .button {
   padding: 10px 20px;
-  border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.5s;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 .btn-contacto {
   background-color: #CCF381;
-  color: rgba(86, 58, 156, 1);
+  color: #4831D4;
 }
 .btn-contacto:hover {
-  background-color: rgba(86, 58, 156, 1);
-  color: #CCF381;
-  font-size: 17px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  padding: 10px 16px;
 }
 @media (max-width: 768px) {
   .container {

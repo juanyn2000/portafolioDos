@@ -93,7 +93,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #4831D4;
+  color: #4831d4;
   width: 100%;
 }
 
@@ -134,8 +134,8 @@ textarea::placeholder {
 button {
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff;
-  background: #4831D4;
+  color: #ccf381;
+  background: #4831d4;
   border: none;
   border-radius: 8px;
   padding: 12px 20px;
@@ -146,12 +146,11 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(90deg, #0056b3, #003d80);
+  background: #4831d4;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  color: #CCF381;
+  color: #ccf381;
   font-size: 20px;
   padding: 10px 16px;
- 
 }
 
 .success-message {

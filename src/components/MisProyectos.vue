@@ -21,6 +21,7 @@
         />
         <div class="card-content">
           <h2 class="card-title">{{ proyecto.nombre }}</h2>
+          <p class="card-descripcion">{{ proyecto.descripcion }}</p>
         </div>
       </div>
     </div>
@@ -48,21 +49,25 @@ export default {
           nombre: "Pokemon Adivina",
           img: "./imgProyectos/pokemon.png",
           url: "https://pokemon-adivina.vercel.app/?vercelToolbarCode=fxaKF79MszkBxPW",
+          descripcion: "Juego de adivinar el nombre de los pokemones, desarrollado con Vue.js, botstrap y pokeapi.",
         },
         {
           nombre: "Super Héroes",
           img: "./imgProyectos/superHero.png",
           url: "https://juanyn2000.github.io/superHero/",
+          descripcion: "Digite numero hasta el 732 para buscar un super héroe. desarrollado con Vue.js, canvas.js y superHeroAPI.",
         },
         {
           nombre: "Viajes por Chile",
           img: "./imgProyectos/viajesPorChile.png",
           url: "https://juanyn2000.github.io/viajesPorChile/",
+          descripcion: "Sitio web de viajes por Chile, desarrollado con Html, Css y bootstrap. muestra lugares emblematicos",
         },
         {
           nombre: "Ricomida",
           img: "./imgProyectos/ricomida.png",
           url: "https://juanyn2000.github.io/ricomida/",
+          descripcion: "Sitio web de recetas de comida, desarrollado con Html, Css y bootstrap. ideal para restaurantes",
         },
       ],
     };
@@ -97,22 +102,34 @@ export default {
   width: 100%;
   margin-top: 50px;
 }
-.descripcion {
-  margin-top: 100px;
+.card-content .card-descripcion  {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  color: #4831d4;
+  font-size: 12px;
+}
+.card-content .card-title {
+  font-size: 20px;
+  font-weight: bold;
   color: #ccf381;
 }
-
-h2 {
+.descripcion{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.descripcion h2 {
   font-size: 40px;
   font-weight: bold;
+  color: #ccf381;
 }
-p {
+.descripcion p {
   font-size: 20px;
-  font-weight: 300;
   margin-top: 20px;
   color: white;
 }
@@ -154,13 +171,6 @@ p {
   font-size: 0.9rem;
   margin-bottom: 10px;
   color: #eaeaea;
-}
-
-.card-link {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #CCF381;
-  text-decoration: none;
 }
 
 
