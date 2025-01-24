@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .contacto {
-  background: white;
+  background: #F9F9F9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,5 +155,18 @@ button:hover {
 
 .success-message {
   font-size: 18px;
+}
+/*pantallas pequeñas*/
+@media (max-width: 768px) {
+  .contacto {
+    min-height: 100vh;
+    width: 100%;
+    align-items: flex-start;
+  }
+.contact-container{
+ margin-top: 50px;
+  align-items: start;
+
+}
 }
 </style>

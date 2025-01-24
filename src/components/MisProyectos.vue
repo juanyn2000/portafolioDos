@@ -49,7 +49,7 @@ export default {
           nombre: "Pokemon Adivina",
           img: "./imgProyectos/pokemon.png",
           url: "https://pokemon-adivina.vercel.app/?vercelToolbarCode=fxaKF79MszkBxPW",
-          descripcion: "Juego de adivinar el nombre de los pokemones, desarrollado con Vue.js, botstrap y pokeapi.",
+          descripcion: "Juego de adivinar el nombre del pokemon, desarrollado con Vue.js, botstrap y pokeapi. usando css para animaciones",
         },
         {
           nombre: "Super Héroes",
@@ -134,6 +134,7 @@ export default {
   color: white;
 }
 .card {
+  background: #F9F9F9;
   border: 1px solid white;
   border-radius: 10px;
   overflow: hidden;
@@ -161,17 +162,57 @@ export default {
   padding: 15px;
 }
 
-.card-title {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
-  color: #4831d4;
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+  .proyectos {
+    min-height: 100vh;
+   
+  }
+
+  .contenedor-proyectos {
+    flex-wrap: wrap; /* Asegura que las tarjetas se distribuyan en filas */
+    justify-content: space-around; /* Distribución uniforme */
+    gap: 20px; /* Espaciado entre filas y columnas */
+    margin: 0;
+  }
+
+  .card {
+    width: 45%; /* Ajusta el ancho para que entren dos tarjetas por fila con un pequeño margen */
+    max-width: 45%; /* Asegura que no se exceda */
+  }
+
+  .card-img {
+   
+    height: 150px; /* Ajusta la altura de las imágenes para que se vean proporcionadas */
+  }
+
+  .card-content {
+    padding: 10px; /* Reduce el espacio interno */
+  }
+
+  .card-content .card-title {
+    font-size: 16px; /* Ajusta el tamaño del título */
+  }
+
+  .card-content .card-descripcion {
+    display: none;
+  }
+
+  .descripcion {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .descripcion h2 {
+    font-size: 28px;
+  }
+
+  .descripcion p {
+    font-size: 16px;
+  }
 }
 
-.card-description {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: #eaeaea;
-}
 
 
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="inicio">
-    <div class="container">
+    <div class="container contenedor-inicio">
       <div class="left">
         <div class="img-perfil">
-            <!-- <img
+          <!-- <img
             class=""
             src="../assets/img/perfil2.jpg"
             alt="imagen de perfil"
@@ -11,9 +11,9 @@
           <img
             class=""
             src="../assets/img/perfilN.jpg"
-            alt="imagen de perfil">
+            alt="imagen de perfil"
+          />
         </div>
-        
       </div>
       <div class="right">
         <p class="parafo">
@@ -36,26 +36,26 @@ export default {
 
 <style scoped>
 .inicio {
-  background:#4831D4;
+  background: #4831d4;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   color: white;
   height: 100vh;
   width: 100%;
 }
-.container {
+.contenedor-inicio {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
- 
+  margin-top: 0%;
+
   width: 100%;
   margin-top: 100px;
 }
 .left {
-  padding: 0 30px ;
+  padding: 0 30px;
   height: 100%;
   display: flex;
   justify-content: start;
@@ -63,18 +63,16 @@ export default {
   width: 100%;
   gap: 10px;
 }
-.img-perfil{
+.img-perfil {
   border-radius: 2%;
   height: 500px;
   width: 350px;
- 
 }
 img {
   border-radius: 2%;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
 }
 
 /*seccion derecha*/
@@ -96,12 +94,12 @@ img {
 .nombre {
   font-size: 60px;
   font-weight: bold;
-  color: #CCF381;
+  color: #ccf381;
 }
 .subtitulo {
   display: block;
   font-size: 35px;
-  color: #CCF381;
+  color: #ccf381;
   height: 40px;
 }
 .button {
@@ -119,37 +117,59 @@ img {
   cursor: pointer;
 }
 .btn-contacto {
-  background-color: #CCF381;
-  color: #4831D4;
+  background-color: #ccf381;
+  color: #4831d4;
 }
 .btn-contacto:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   font-size: 20px;
   padding: 10px 16px;
 }
+/*pantallas pequeñas*/
 @media (max-width: 768px) {
-  .container {
+  .inicio {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .right {
+    width: auto;
+    padding: 0%;
+    margin: 20px;
+    align-items: center;
+  }
+  .left {
+    width: auto;
+    padding: 0%;
+    margin: 0%;
+  }
+  .contenedor-inicio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
   }
   .parafo {
     font-size: 15px;
-    text-align: left;
+    text-align: center;
     width: 100%;
     padding-bottom: 10px;
+    align-content: center;
   }
   .nombre {
     font-size: 35px;
     font-weight: bold;
-    color: #CCF381;
+    color: #ccf381;
   }
   .subtitulo {
     display: block;
     font-size: 20px;
-    color: #CCF381;
+    color: #ccf381;
     height: 40px;
   }
-  .img-perfil{
+  .img-perfil {
     border-radius: 2%;
     height: 300px;
     width: 250px;

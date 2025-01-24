@@ -36,8 +36,7 @@
     <div
       class="scroll-container"
       ref="scrollContainer"
-      @wheel="handleScroll"
-      style="overflow: hidden; height: 100vh; position: relative"
+      :style="{ overflow: isSmallScreen ? 'auto' : 'hidden', height: '100vh' }"
     >
       <div class="scroll-content">
         <section
@@ -71,6 +70,7 @@ export default {
       currentSection: 0,
       isScrolling: false,
       isMenuOpen: false,
+      isSmallScreen: window.innerWidth < 768,
       sections: [
         { name: "Inicio", class: "inicio", component: "Inicio" },
         { name: "Habilidades", class: "habilidades", component: "Habilidades" },
@@ -81,10 +81,12 @@ export default {
   },
   methods: {
     navigateToSection(index) {
-      const section = this.$refs.scrollContainer.children[0].children[index];
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      this.currentSection = index;
-      this.closeMenu();
+      if (!this.isSmallScreen) {
+        const section = this.$refs.scrollContainer.children[0].children[index];
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        this.currentSection = index;
+        this.closeMenu();
+      }
     },
     toggleMenu(event) {
       this.isMenuOpen = event.target.checked;
@@ -93,7 +95,7 @@ export default {
       this.isMenuOpen = false;
     },
     handleScroll(event) {
-      if (this.isScrolling) return;
+      if (this.isScrolling || this.isSmallScreen) return;
       const delta = event.deltaY;
       let nextSection = this.currentSection;
       if (delta > 0) {
@@ -113,11 +115,25 @@ export default {
           this.isScrolling = false;
         }, 1000);
       }
+    },
+    checkScreenSize() {
+      this.isSmallScreen = window.innerWidth < 768;
+    }
+  },
+  mounted() {
+    window.addEventListener("resize", this.checkScreenSize);
+    if (!this.isSmallScreen) {
+      window.addEventListener("wheel", this.handleScroll);
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.checkScreenSize);
+    if (!this.isSmallScreen) {
+      window.removeEventListener("wheel", this.handleScroll);
     }
   }
 };
 </script>
-
 
 <style>
 /* Contenedor principal */
@@ -130,7 +146,6 @@ export default {
 /* Contenedor de las secciones */
 .scroll-container {
   position: relative;
-  overflow: hidden;
 }
 
 .scroll-content {
@@ -144,7 +159,6 @@ export default {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  height: 100vh;
 }
 
 /* Navbar */
@@ -154,14 +168,15 @@ export default {
   width: 100%;
   background: transparent;
   z-index: 1000;
-
 }
+
 .logo {
   display: inline-block;
   color: transparent;
   font-size: 60px;
   margin-left: 10px;
 }
+
 .nav {
   width: 100%;
   height: auto;
@@ -174,14 +189,14 @@ export default {
   overflow: hidden;
   transition: max-height 0.5s ease-out, background-color 0.5s ease-out;
 }
+
 .nav-expanded {
-  background: #FBFBFB; /* Fondo blanco cuando está expandido */
+  background: #FBFBFB;
   max-height: 100%;
-  
 }
 
 .menu {
-  list-style: none;
+  
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -209,15 +224,15 @@ export default {
 .hamb {
   cursor: pointer;
   float: right;
-  padding: 40px 20px;
+  padding: 60px 30px;
 }
 
 .hamb-line {
   background: #CCF381;
   display: block;
-  height: 2px;
+  height: 4px;
   position: relative;
-  width: 24px;
+  width: 40px;
   z-index: 1000;
 }
 
@@ -232,11 +247,11 @@ export default {
 }
 
 .hamb-line::before {
-  top: 5px;
+  top: 10px;
 }
 
 .hamb-line::after {
-  top: -5px;
+  top: -10px;
 }
 
 .side-menu {
@@ -261,38 +276,36 @@ export default {
   top: 0;
 }
 
-/*escritorio*/
-
 @media (min-width: 768px) {
   .contenedor-principal {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
- }
- .header {
-   position: fixed;
-   top: 0;
-   width: 100%;
-   background: transparent;
-   z-index: 1000;
-   padding: 0 90px;
- }
-   .nav {
-     width: 250px;
-     height: auto;
-     position: realtive;
-     top: 20px;
-     right: 100px;
-     background: transparent;
-     max-height: 0;
-     overflow: hidden;
-     transition: max-height 0.5s ease-out;
-     z-index: -1;
-   }
-   .nav-expanded {
-     background: white; /* Fondo cyan cuando está expandido */
-     max-height: 100%;
-     width: 350px;
-   }
- }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    padding: 0 90px;
+  }
+    .nav {
+      width: 250px;
+      height: auto;
+      position: realtive;
+      top: 20px;
+      right: 100px;
+      background: transparent;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      z-index: -1;
+    }
+    .nav-expanded {
+      background: white; /* Fondo cyan cuando está expandido */
+      max-height: 100%;
+      width: 350px;
+    }
+}
 </style>
