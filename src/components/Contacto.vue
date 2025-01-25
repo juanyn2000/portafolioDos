@@ -2,7 +2,8 @@
   <div class="contacto">
     <div class="contact-container">
       <div class="form-wrapper">
-        <h2 class="text-center">Contáctame</h2>
+        <h2 class="titulo">¡Hablemos!</h2>
+        <p class="invitacion">Estaré encantado de escuchar sobre tu proyecto o responder cualquier pregunta.</p>
         <form @submit.prevent="handleSubmit">
           <div class="row">
             <div class="col-12 mb-3">
@@ -88,7 +89,7 @@ export default {
 
 <style scoped>
 .contacto {
-  background: #F9F9F9;
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,11 +99,20 @@ export default {
 }
 
 .form-wrapper {
-  max-width: 600px;
+  
   width: 100%;
   padding: 20px;
 }
-
+.titulo {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+}
+.invitacion {
+  font-size: 25px;
+  font-weight: normal;
+  padding: 30px 0;
+}
 label {
   display: block;
   margin-bottom: 5px;
@@ -163,10 +173,18 @@ button:hover {
     width: 100%;
     align-items: flex-start;
   }
-.contact-container{
- margin-top: 50px;
-  align-items: start;
-
-}
+  .contact-container {
+    margin-top: 50px;
+    align-items: start;
+  }
+  .titulo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .invitacion {
+    font-size: 20px;
+    font-weight: normal;
+  }
 }
 </style>
