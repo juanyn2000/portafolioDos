@@ -3,16 +3,14 @@
     <div class="container contenedor-inicio">
       <div class="left">
         <div class="img-perfil">
-          <!-- <img
-            class=""
-            src="../assets/img/perfil2.jpg"
-            alt="imagen de perfil"
-            /> -->
           <img
-            class=""
             src="../assets/img/perfilN.jpg"
             alt="imagen de perfil"
           />
+          <!-- <img
+            src="../assets/img/perfil2.jpg"
+            alt="imagen de perfil"
+          /> -->
         </div>
       </div>
       <div class="right">
@@ -22,7 +20,7 @@
           apasiona diseñar y construir experiencias digitales que sean rápidas,
           atractivas y fáciles de usar.
         </p>
-        <button class="button btn-contacto">Contactame</button>
+        <button class="button btn-contacto" @click="irAContacto">¡Hablemos!</button>
       </div>
     </div>
   </div>
@@ -31,10 +29,17 @@
 <script>
 export default {
   name: "Inicio",
+  methods: {
+    irAContacto() {
+      // Emitir evento al componente padre (App.vue) para cambiar a la sección de contacto
+      this.$emit('navigateToSection', 3); // Indica la sección de contacto
+    },
+  },
 };
 </script>
 
 <style scoped>
+
 .inicio {
   background: #4831d4;
   display: flex;
@@ -49,10 +54,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 0%;
-
-  width: 100%;
   margin-top: 100px;
+  width: 100%;
 }
 .left {
   padding: 0 30px;
@@ -104,10 +107,9 @@ img {
 }
 .button {
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  font-weight: bold;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -122,7 +124,7 @@ img {
 }
 .btn-contacto:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px 16px;
 }
 /*pantallas pequeñas*/

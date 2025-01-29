@@ -192,8 +192,8 @@
 }
 
 .bubble:nth-child(5) {
-  bottom: 20%;
-  left: 30%;
+  bottom: 70%;
+  left: 50%;
   animation-duration: 4.5s;
   animation-delay: 0.5s;
   color: #f00;
@@ -207,8 +207,8 @@
 .bubble:nth-child(6) {
   width: 110px;
   height: 110px;
-  bottom: 70%;
-  left: 50%;
+  bottom: 20%;
+  left: 30%;
   animation-duration: 5.5s;
   animation-delay: 0.2s;
   color: black;
@@ -252,7 +252,7 @@
   .habilidades {
     margin: 0;
     flex-direction: column;
-    min-height: 100vh;
+     min-height: 100vh;
   }
   .bubbles {
     width: 100%;

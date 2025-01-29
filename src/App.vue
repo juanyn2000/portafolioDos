@@ -17,7 +17,7 @@
         <ul class="menu">
           <li
             class="nav-link"
-            v-for="(section, index) in sections"
+            v-for="(section, index) in sectionsWithoutFooter"
             :key="index"
           >
             <a
@@ -49,21 +49,39 @@
         </section>
       </div>
     </div>
+
+    <!-- barraMenu (sin Footer) -->
+    <ul class="circulos">
+      <li
+        class="nav-link"
+        v-for="(section, index) in sectionsWithoutFooter"
+        :key="index"
+      >
+        <a
+          href="#"
+          @click.prevent="navigateToSection(index)"
+          :class="{ active: currentSection === index }"
+        ></a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Inicio from './components/Inicio.vue';
-import Habilidades from './components/Habilidades.vue';
-import Proyectos from './components/MisProyectos.vue';
-import Contacto from './components/Contacto.vue';
+import Inicio from "./components/Inicio.vue";
+import Habilidades from "./components/Habilidades.vue";
+import Proyectos from "./components/MisProyectos.vue";
+import Contacto from "./components/Contacto.vue";
+import Footer from "./components/Footer.vue";
+import { eventBus } from "@/eventBus";
 
 export default {
   components: {
     Inicio,
     Habilidades,
     Proyectos,
-    Contacto
+    Contacto,
+    Footer,
   },
   data() {
     return {
@@ -75,40 +93,39 @@ export default {
         { name: "Inicio", class: "inicio", component: "Inicio" },
         { name: "Habilidades", class: "habilidades", component: "Habilidades" },
         { name: "Proyectos", class: "proyectos", component: "Proyectos" },
-        { name: "Contacto", class: "contacto", component: "Contacto" }
-      ]
+        { name: "Contacto", class: "contacto", component: "Contacto" },
+        { name: "Footer", class: "footer", component: "Footer" }, // Se mantiene en la estructura
+      ],
     };
+  },
+  computed: {
+    sectionsWithoutFooter() {
+      return this.sections.slice(0, -1); // Excluye el footer de la navegación
+    },
   },
   methods: {
     navigateToSection(index) {
-      if (!this.isSmallScreen) {
-        const section = this.$refs.scrollContainer.children[0].children[index];
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-        this.currentSection = index;
-        this.closeMenu();
-      }
+      this.currentSection = index;
+      const section = this.$refs.scrollContainer.children[0].children[index];
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      this.isMenuOpen = false;
     },
     toggleMenu(event) {
       this.isMenuOpen = event.target.checked;
     },
-    closeMenu() {
-      this.isMenuOpen = false;
-    },
     handleScroll(event) {
       if (this.isScrolling || this.isSmallScreen) return;
+
       const delta = event.deltaY;
-      let nextSection = this.currentSection;
-      if (delta > 0) {
-        nextSection = Math.min(this.sections.length - 1, this.currentSection + 1);
-      } else {
-        nextSection = Math.max(0, this.currentSection - 1);
-      }
+      const maxIndex = this.sections.length - 1; // Ahora incluye el footer
+      const nextSection = delta > 0
+        ? Math.min(maxIndex, this.currentSection + 1)
+        : Math.max(0, this.currentSection - 1);
 
       if (nextSection !== this.currentSection) {
         this.isScrolling = true;
         this.currentSection = nextSection;
-        const scrollContainer = this.$refs.scrollContainer;
-        const section = scrollContainer.children[0].children[nextSection];
+        const section = this.$refs.scrollContainer.children[0].children[nextSection];
         section.scrollIntoView({ behavior: "smooth", block: "start" });
 
         setTimeout(() => {
@@ -118,7 +135,7 @@ export default {
     },
     checkScreenSize() {
       this.isSmallScreen = window.innerWidth < 768;
-    }
+    },
   },
   mounted() {
     window.addEventListener("resize", this.checkScreenSize);
@@ -131,9 +148,10 @@ export default {
     if (!this.isSmallScreen) {
       window.removeEventListener("wheel", this.handleScroll);
     }
-  }
+  },
 };
 </script>
+
 
 <style>
 /* Contenedor principal */
@@ -191,12 +209,11 @@ export default {
 }
 
 .nav-expanded {
-  background: #FBFBFB;
+  background: #fbfbfb;
   max-height: 100%;
 }
 
 .menu {
-  
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -217,7 +234,7 @@ export default {
 }
 
 .menu a:hover {
-  color: #CCF381;
+  color: #ccf381;
   transition: color 0.3s;
 }
 
@@ -228,7 +245,7 @@ export default {
 }
 
 .hamb-line {
-  background: #CCF381;
+  background: #ccf381;
   display: block;
   height: 4px;
   position: relative;
@@ -238,7 +255,7 @@ export default {
 
 .hamb-line::before,
 .hamb-line::after {
-  background: #CCF381;
+  background: #ccf381;
   content: "";
   display: block;
   height: 100%;
@@ -275,37 +292,81 @@ export default {
   transform: rotate(45deg);
   top: 0;
 }
-
 @media (min-width: 768px) {
-  .contenedor-principal {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
   .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: transparent;
-    z-index: 1000;
     padding: 0 90px;
   }
-    .nav {
-      width: 250px;
-      height: auto;
-      position: realtive;
-      top: 20px;
-      right: 100px;
-      background: transparent;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out;
-      z-index: -1;
-    }
-    .nav-expanded {
-      background: white; /* Fondo cyan cuando está expandido */
-      max-height: 100%;
-      width: 350px;
-    }
+  .nav {
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    background: transparent;
+    width: 300px;
+    z-index: -1;
+  }
+
+  .nav-expanded {
+    background: white;
+    max-height: 100%;
+  }
+  .circulos {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+   width: 50px;
+    height: 150px;
+  }
+  
+  .circulos .nav-link a {
+    display: block;
+    width: 15px; /* Ancho del cuadrado */
+    height: 15px; /* Alto del cuadrado */
+    background-color: #ccf381; /* Color de fondo por defecto */
+    border-radius: 50%; /* Esquinas ligeramente redondeadas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  
+    .circulos .nav-link:nth-child(1) a.active {
+    background-color: transparent;
+    border: 2px solid white; /* Borde del cuadrado activo */
+    border-radius: 0%; /* Quita las esquinas redondeadas cuando está activo */
+    transform: rotate(45deg); /* Gira el elemento 45 grados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .circulos .nav-link:nth-child(2) a.active {
+    background-color: transparent;
+    border: 2px solid #4831d4; /* Borde del cuadrado activo */
+    border-radius: 0%; /* Quita las esquinas redondeadas cuando está activo */
+    transform: rotate(45deg); /* Gira el elemento 45 grados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .circulos .nav-link:nth-child(3) a.active {
+    background-color: transparent;
+    border: 2px solid white; /* Borde del cuadrado activo */
+    border-radius: 0%; /* Quita las esquinas redondeadas cuando está activo */
+    transform: rotate(45deg); /* Gira el elemento 45 grados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .circulos .nav-link:nth-child(4) a.active {
+    background-color: transparent;
+    border: 2px solid #4831d4; /* Borde del cuadrado activo */
+    border-radius: 0%; /* Quita las esquinas redondeadas cuando está activo */
+    transform: rotate(45deg); /* Gira el elemento 45 grados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .circulos .nav-link a:hover {
+    background-color: purple; /* Color cuando pasas el mouse */
+  }
+  
 }
 </style>

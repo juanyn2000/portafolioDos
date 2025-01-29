@@ -6,30 +6,9 @@ import MisProyectos from "../components/MisProyectos.vue";
 import Contacto from "../components/Contacto.vue";
 import ErrorPage from "../components/Error.vue";
 
+
 const routes = [
-  { 
-    path: "/", 
-    name: "inicio", 
-    component: Inicio 
-  },
-
-  { 
-    path: "/habilidades", 
-    name: "Habilidades", 
-    component: Habilidades 
-  },
-
-  { 
-    path: "/proyectos", 
-    name: "MisProyectos", 
-    component: MisProyectos 
-   },
     
-  { 
-    path: "/contacto", 
-    name: "Contacto", 
-    component: Contacto 
-  },
   {
     path: '/:pathMatch(.*)*',
     name: 'error',
