@@ -45,7 +45,11 @@
           :class="['contenedor', section.class]"
           :style="{ height: '100vh' }"
         >
-          <component :is="section.component" />
+          <!-- Renderizar todos los componentes y escuchar el evento en Inicio -->
+          <component
+            :is="section.component"
+            @navigateToSection="navigateToSection"
+          />
         </section>
       </div>
     </div>
@@ -73,7 +77,6 @@ import Habilidades from "./components/Habilidades.vue";
 import Proyectos from "./components/MisProyectos.vue";
 import Contacto from "./components/Contacto.vue";
 import Footer from "./components/Footer.vue";
-import { eventBus } from "@/eventBus";
 
 export default {
   components: {
@@ -94,13 +97,13 @@ export default {
         { name: "Habilidades", class: "habilidades", component: "Habilidades" },
         { name: "Proyectos", class: "proyectos", component: "Proyectos" },
         { name: "Contacto", class: "contacto", component: "Contacto" },
-        { name: "Footer", class: "footer", component: "Footer" }, // Se mantiene en la estructura
+        { name: "Footer", class: "footer", component: "Footer" },
       ],
     };
   },
   computed: {
     sectionsWithoutFooter() {
-      return this.sections.slice(0, -1); // Excluye el footer de la navegación
+      return this.sections.slice(0, -1);
     },
   },
   methods: {
@@ -117,7 +120,7 @@ export default {
       if (this.isScrolling || this.isSmallScreen) return;
 
       const delta = event.deltaY;
-      const maxIndex = this.sections.length - 1; // Ahora incluye el footer
+      const maxIndex = this.sections.length - 1;
       const nextSection = delta > 0
         ? Math.min(maxIndex, this.currentSection + 1)
         : Math.max(0, this.currentSection - 1);
