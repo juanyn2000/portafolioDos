@@ -64,10 +64,10 @@ export default {
           descripcion: "Sitio web de viajes por Chile, desarrollado con Html, Css y bootstrap. muestra lugares emblematicos",
         },
         {
-          nombre: "Ricomida",
-          img: "./imgProyectos/ricomida.png",
-          url: "https://juanyn2000.github.io/ricomida/",
-          descripcion: "Sitio web de recetas de comida, desarrollado con Html, Css y bootstrap. ideal para restaurantes",
+          nombre: "Animales",
+          img: "./imgProyectos/animales.png",
+          url: "https://animales-five.vercel.app/",
+          descripcion: "Sitio web que muestra mediante renderizado de componentes, animales y sus sonidos caracteristicos. desarrollado con Vue.js",
         },
       ],
     };
