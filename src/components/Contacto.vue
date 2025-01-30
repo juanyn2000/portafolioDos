@@ -3,7 +3,10 @@
     <div class="contact-container">
       <div class="form-wrapper">
         <h2 class="titulo">¡Hablemos!</h2>
-        <p class="invitacion">Estaré encantado de escuchar sobre tu proyecto o responder cualquier pregunta.</p>
+        <p class="invitacion">
+          Estaré encantado de escuchar sobre tu proyecto o responder cualquier
+          pregunta.
+        </p>
         <form @submit.prevent="handleSubmit">
           <div class="row">
             <div class="col-12 mb-3">
@@ -61,6 +64,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 export default {
   name: "Contacto",
 
@@ -76,12 +80,31 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.submitted = true;
+      const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      emailjs.init(userId);
+      emailjs
+        .send(serviceId, templateId, this.form)
+        .then(() => {
+          this.submitted = true;
 
-      // Limpia el formulario
-      this.form.name = "";
-      this.form.email = "";
-      this.form.message = "";
+          // Limpia el formulario
+          this.form.name = "";
+          this.form.email = "";
+          this.form.message = "";
+          console.log("Email enviado correctamente");
+        })
+        .catch((error) => {
+          this.submitted = false;
+          console.error("Error al enviar el email:", error);
+        });
+      // this.submitted = true;
+
+      // // Limpia el formulario
+      // this.form.name = "";
+      // this.form.email = "";
+      // this.form.message = "";
     },
   },
 };
@@ -99,7 +122,6 @@ export default {
 }
 
 .form-wrapper {
-  
   width: 100%;
   padding: 20px;
 }
@@ -112,7 +134,6 @@ export default {
   font-size: 25px;
   font-weight: normal;
   padding: 30px 0;
-
 }
 label {
   display: block;
