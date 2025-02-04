@@ -1,8 +1,7 @@
 <template>
-  <div class="contenedor-principal">
+  <div @click="listenerNav" class="contenedor-principal">
     <!-- Navbar fijo -->
     <header class="header">
-      <a href="#" class="logo">AN</a>
       <input
         type="checkbox"
         id="side-menu"
@@ -107,6 +106,25 @@ export default {
     },
   },
   methods: {
+    listenerNav(event) {
+      // Verifica si el clic ocurrió fuera del nav y del botón de hamburguesa
+      const navElement = this.$el.querySelector("nav");
+      const hambElement = this.$el.querySelector(".hamb");
+      const sideMenuCheckbox = this.$el.querySelector("#side-menu");
+
+      // Si el clic no fue en el nav ni en el botón hamburguesa, cierra el menú
+      if (
+        !navElement.contains(event.target) &&
+        !hambElement.contains(event.target) &&
+        !sideMenuCheckbox.contains(event.target)
+      ) {
+        this.isMenuOpen = false;
+        // También desmarca el checkbox si está marcado
+        if (sideMenuCheckbox) {
+          sideMenuCheckbox.checked = false;
+        }
+      }
+    },
     navigateToSection(index) {
       this.currentSection = index;
       const section = this.$refs.scrollContainer.children[0].children[index];
@@ -121,14 +139,16 @@ export default {
 
       const delta = event.deltaY;
       const maxIndex = this.sections.length - 1;
-      const nextSection = delta > 0
-        ? Math.min(maxIndex, this.currentSection + 1)
-        : Math.max(0, this.currentSection - 1);
+      const nextSection =
+        delta > 0
+          ? Math.min(maxIndex, this.currentSection + 1)
+          : Math.max(0, this.currentSection - 1);
 
       if (nextSection !== this.currentSection) {
         this.isScrolling = true;
         this.currentSection = nextSection;
-        const section = this.$refs.scrollContainer.children[0].children[nextSection];
+        const section =
+          this.$refs.scrollContainer.children[0].children[nextSection];
         section.scrollIntoView({ behavior: "smooth", block: "start" });
 
         setTimeout(() => {
@@ -154,7 +174,6 @@ export default {
   },
 };
 </script>
-
 
 <style>
 /* Contenedor principal */
@@ -214,6 +233,7 @@ export default {
 .nav-expanded {
   background: #fbfbfb;
   max-height: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .menu {
@@ -295,6 +315,7 @@ export default {
   transform: rotate(45deg);
   top: 0;
 }
+
 @media (min-width: 768px) {
   .header {
     padding: 0 90px;
@@ -323,11 +344,11 @@ export default {
     list-style: none;
     padding: 0;
     margin: 0;
-   
-   width: 50px;
+
+    width: 50px;
     height: 150px;
   }
-  
+
   .circulos .nav-link a {
     display: block;
     width: 15px; /* Ancho del cuadrado */
@@ -336,9 +357,8 @@ export default {
     border-radius: 50%; /* Esquinas ligeramente redondeadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
-  
-  
-    .circulos .nav-link:nth-child(1) a.active {
+
+  .circulos .nav-link:nth-child(1) a.active {
     background-color: transparent;
     border: 2px solid white; /* Borde del cuadrado activo */
     border-radius: 0%; /* Quita las esquinas redondeadas cuando está activo */
@@ -366,10 +386,9 @@ export default {
     transform: rotate(45deg); /* Gira el elemento 45 grados */
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  
+
   .circulos .nav-link a:hover {
     background-color: purple; /* Color cuando pasas el mouse */
   }
-  
 }
 </style>

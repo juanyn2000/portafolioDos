@@ -5,16 +5,35 @@
         <div class="content-saludo">
           <h3 class="saludo">¡HOLA!</h3>
         </div>
-        <p>JUAN.ARACENA.J@GMAIL.COM</p>
-        <a href="https://wa.me/56948764112" target="_blank"><p>WHATSAPP</p></a>
-        <a href="https://t.me/juanyn_1" target="_blank"><p>TELEGRAM</p></a>
+        <div class="content-icons">
+          <i class="fa-solid fa-envelope"></i>
+          <p>JUAN.ARACENA.J@GMAIL.COM</p>
+        </div>
+        <div class="content-icons">
+          <i class="fa-solid fa-phone"></i>
+          <a href="https://wa.me/56948764112" target="_blank"
+            ><p>WHATSAPP</p></a
+          >
+        </div>
+        <div class="content-icons">
+          <i class="fa-brands fa-telegram"></i>
+          <a href="https://t.me/juanyn_1" target="_blank"><p>TELEGRAM</p></a>
+        </div>
       </div>
       <div class="bottom">
         <p>© 2025 - Todos los derechos reservados</p>
         <div class="rrss">
-          <a href="https://www.instagram.com/juanyn_forever/?hl=es" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/juanyn.forever/"><i class="fa-brands fa-square-facebook" target="_blank"></i></a>
-          <a href="https://www.linkedin.com/in/juan-aracena-4b2363134/"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
+          <a
+            href="https://www.instagram.com/juanyn_forever/?hl=es"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/juanyn.forever/"
+            ><i class="fa-brands fa-square-facebook" target="_blank"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/juan-aracena-4b2363134/"
+            ><i class="fa-brands fa-linkedin" target="_blank"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -95,6 +114,19 @@ export default {
 .top a:hover {
   color: #f9f9f9;
 }
+.content-icons {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin-bottom: 10px; /* Espacio entre cada grupo de icono y texto */
+}
+.content-icons i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.content-icons p {
+  margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -115,7 +147,6 @@ export default {
   }
   .top {
     padding-top: 0;
-   
   }
   .bottom {
     flex-direction: column-reverse;
@@ -133,15 +164,15 @@ export default {
   .rrss a {
     font-size: 20px;
   }
- .content-saludo{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  align-items: flex-start;
- }
- .bottom p{
-  text-align: center;
-  font-size: 15px;
- }
+  .content-saludo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: flex-start;
+  }
+  .bottom p {
+    text-align: center;
+    font-size: 15px;
+  }
 }
 </style>
