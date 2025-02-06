@@ -28,6 +28,16 @@
             </a>
           </li>
         </ul>
+        <div class="menu-redesContenedor container">
+          <p>VISITA MIS REDES</p>
+          <div class="menu-redes ">
+            <a href="https://www.instagram.com/juanyn_forever/?hl=es" target="_blank">IG</a>
+            <a href="https://wa.me/56948764112" target="_blank">WH</a>
+            <a href="https://www.facebook.com/juanyn.forever/" target="_blank">FB</a>
+            <a href="https://www.linkedin.com/in/juan-aracena-4b2363134/" target="_blank">LI</a>
+            <a href="https://t.me/juanyn_1" target="_blank">TE</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -210,23 +220,17 @@ export default {
   z-index: 1000;
 }
 
-.logo {
-  display: inline-block;
-  color: transparent;
-  font-size: 60px;
-  margin-left: 10px;
-}
-
 .nav {
   width: 100%;
   height: auto;
-  padding: 20px 10px;
+  padding: 0;
   position: fixed;
   top: 0;
   right: 0;
   background: transparent;
   max-height: 0;
   overflow: hidden;
+  font-size: 15px;
   transition: max-height 0.5s ease-out, background-color 0.5s ease-out;
 }
 
@@ -238,7 +242,6 @@ export default {
 
 .menu {
   display: flex;
-  gap: 20px;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -246,7 +249,7 @@ export default {
 
 .menu a {
   display: block;
-  padding: 30px;
+  padding: 15px;
   color: rgba(86, 58, 156, 1);
   text-decoration: none;
 }
@@ -315,7 +318,37 @@ export default {
   transform: rotate(45deg);
   top: 0;
 }
-
+.menu-redesContenedor {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  width: 80%;
+ 
+}
+.menu-redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+}
+.menu-redes a {
+  color: #4831d4;
+  font-size: 15px;
+  text-decoration: none;
+}
+.menu-redes a:hover {
+  color: #ccf381;
+  transition: color 0.3s;
+}
+.menu-redesContenedor p {
+  color: #CBC9E2;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 0px 0 10PX 0;
+  text-align: left;
+}
 @media (min-width: 768px) {
   .header {
     padding: 0 90px;
@@ -325,7 +358,7 @@ export default {
     top: 30px;
     right: 100px;
     background: transparent;
-    width: 300px;
+    width: 350px;
     z-index: -1;
   }
 
