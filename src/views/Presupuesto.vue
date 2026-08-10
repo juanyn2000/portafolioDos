@@ -1,0 +1,686 @@
+<template>
+  <div class="proposal-container">
+    <div class="header">
+      <h1>Propuesta de Servicios Fotográficos</h1>
+      <p>Cobertura Profesional de Graduación Cuarto Medio — Juan Aracena</p>
+    </div>
+
+    <div class="content">
+      <div class="section-title">
+        <i class="fa-solid fa-calendar-days"></i> Detalles del Evento
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="label">Fotógrafo</div>
+          <div class="value">Juan Aracena</div>
+        </div>
+        <div class="info-card">
+          <div class="label">Evento</div>
+          <div class="value">Fiesta de Graduación Cuarto Medio</div>
+        </div>
+        <div class="info-card">
+          <div class="label">Horario Límite</div>
+          <div class="value">Hasta las 02:00 AM</div>
+        </div>
+        <div class="info-card">
+          <div class="label">Modalidad</div>
+          <div class="value">Cobertura Integral</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <i class="fa-solid fa-camera-retro"></i> Alcance Detallado de la Cobertura
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fa-solid fa-person-walking-arrow-right"></i>
+          <div>
+            <h4>1. Entrada y Recepción de Alumnos/as</h4>
+            <p>Registro minucioso en la entrada al salón:</p>
+            <ul>
+              <li>Fotografías con acompañantes.</li>
+              <li>Fotografías con compañeros/as.</li>
+              <li>Momento de ingreso oficial al salón.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mini-gallery">
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC_0123.jpg" alt="Entrada" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC_0201.jpg" alt="Acompañantes" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC_0168.jpg" alt="Compañeros" /></div>
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <h4>2. Protocolo, Escenario y Premiaciones</h4>
+            <p>Momentos estelares de la ceremonia:</p>
+            <ul>
+              <li>Última lista y nombramiento oficial.</li>
+              <li>Retratos en el escenario con efectos de chispas frías.</li>
+              <li>Foto panorámica aérea cuando estén todos juntos tras el nombramiento.</li>
+              <li>Fotografías en mesas de invitados y familia.</li>
+              <li>Registro de concursos y premiados de la noche.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mini-gallery">
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC01462.jpg" alt="Escenario" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC02189.jpg" alt="Mesas" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC00938.jpg" alt="Premiados" /></div>
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fa-solid fa-music"></i>
+          <div>
+            <h4>3. Baile Vals y Fiesta (After Party)</h4>
+            <p>Diversión y celebración sin pausas:</p>
+            <ul>
+              <li>Fotos del tradicional baile de vals.</li>
+              <li>Cobertura completa de la fiesta y ambiente general.</li>
+              <li>Extensión de servicio hasta las <strong>02:00 AM</strong> como límite.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mini-gallery">
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC06430.jpg" alt="Vals" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC06450.jpg" alt="Fiesta" /></div>
+        <div class="mini-gallery-item"><img src="@/assets/img/DSC06497.jpg" alt="DJ / Baile" /></div>
+      </div>
+
+      <div class="section-title">
+        <i class="fa-solid fa-box-open"></i> Entregables y Plazos
+      </div>
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fa-solid fa-bolt"></i>
+          <div>
+            <h4>Avance Express (Teaser)</h4>
+            <p>Set exclusivo de 10 fotografías editadas en alta resolución entregadas en un plazo máximo de <strong>24 horas</strong> post-evento.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          <div>
+            <h4>Galería Digital Privada Ilimitada</h4>
+            <p>Todas las fotografías del evento editadas profesionalmente (cantidad ilimitada), en plataforma online privada con descarga gratuita.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <h4>Plazo de Entrega Final</h4>
+            <p>Entrega de la galería completa en un plazo máximo de <strong>10 días hábiles</strong> posteriores al evento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <i class="fa-solid fa-images"></i> Portafolio y Estilo Visual
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+        Una selección ampliada con el estándar de calidad, iluminación y captura de momentos que garantizamos:
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="@/assets/img/114797.jpg.jpeg" alt="Foto 1" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114798.jpg.jpeg" alt="Foto 2" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114799.jpg.jpeg" alt="Foto 3" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114800.jpg.jpeg" alt="Foto 4" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114801.jpg.jpeg" alt="Foto 5" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114802.jpg.jpeg" alt="Foto 6" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/114803.jpg.jpeg" alt="Foto 7" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0162.jpg" alt="Foto 8" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0027.jpg" alt="Foto 9" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0070.jpg" alt="Foto 10" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0079.jpg" alt="Foto 11" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0103.jpg" alt="Foto 12" /><div class="gallery-overlay"></div></div>
+        <div class="gallery-item"><img src="@/assets/img/DSC_0141.jpg" alt="Foto 13" /><div class="gallery-overlay"></div></div>
+      </div>
+
+      <div class="section-title">
+        <i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto e Inversión
+      </div>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <div class="pricing-desc">
+            <strong>Cobertura Fotográfica Integral (Hasta las 02:00 AM)</strong>
+            <span>Entrada, protocolo, escenario, chispas frías, mesas, vals y fiesta</span>
+          </div>
+          <div class="pricing-price">$250.000 CLP</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-desc">
+            <strong>Edición Ilimitada y Galería Online Privada</strong>
+            <span>Procesamiento estético profesional y alojamiento web</span>
+          </div>
+          <div class="pricing-price">$70.000 CLP</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-desc">
+            <strong>Pack Express (Teaser de 10 fotos)</strong>
+            <span>Entrega prioritaria en 24 horas post-evento</span>
+          </div>
+          <div class="pricing-price">$30.000 CLP</div>
+        </div>
+        <div class="pricing-row total">
+          <div class="pricing-desc">
+            <strong>Valor Total del Servicio</strong>
+            <span>Todo incluido (Sin cobros ocultos)</span>
+          </div>
+          <div class="pricing-price">$350.000 CLP</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a
+          href="https://wa.me/56948764112?text=Hola%20Juan,%20revisé%20la%20propuesta%20de%20fotografía%20para%20la%20graduación%20y%20quiero%20reservar%20la%20fecha."
+          target="_blank"
+          class="btn-primary"
+        >
+          <i class="fa-brands fa-whatsapp fa-xl"></i> Aceptar Propuesta y Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="proposal-footer">
+      Propuesta generada por Juan Aracena • Servicios de Fotografía Profesional • Válida por 15 días.
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="Imagen ampliada" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+  </div>
+</template>
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // Solo ejecuta si estamos en el navegador
+  if (typeof window !== 'undefined') {
+    const allImages = document.querySelectorAll('.mini-gallery-item img, .gallery-item img');
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    const counter = document.getElementById('lightboxCounter');
+
+    let currentIndex = 0;
+    const imagesArray = Array.from(allImages);
+
+    function openModal(index) {
+      currentIndex = index;
+      updateModalImage();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateModalImage() {
+      const currentImg = imagesArray[currentIndex];
+      modalImg.src = currentImg.src;
+      modalImg.alt = currentImg.alt;
+      counter.textContent = `${currentIndex + 1} / ${imagesArray.length}`;
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+      updateModalImage();
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % imagesArray.length;
+      updateModalImage();
+    }
+
+    imagesArray.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        openModal(index);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'ArrowLeft') {
+        showPrev();
+      } else if (e.key === 'ArrowRight') {
+        showNext();
+      }
+    });
+  }
+});
+</script>
+
+<style scoped>
+:root {
+  --primary: #1e1b4b;
+  --accent: #d97706;
+  --accent-light: #fef3c7;
+  --bg-color: #fafaf9;
+  --card-bg: #ffffff;
+  --text-main: #1c1917;
+  --text-muted: #78716c;
+  --border: #e7e5e4;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.proposal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px -15px rgba(30, 27, 75, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.header {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  color: white;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #d97706, #fbbf24, #d97706);
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+.content {
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.section-title i {
+  color: var(--accent);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+  border-color: #cbd5e1;
+}
+
+.info-card .label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.info-card .value {
+  font-size: 1.05rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fdfbf7;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+
+.feature-item i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.feature-item h4 {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.feature-item p,
+.feature-item ul {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.feature-item ul {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.feature-item li {
+  margin-bottom: 3px;
+}
+
+.mini-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.mini-gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 130px;
+  background: #e7e5e4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.mini-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 160px;
+  background: #e7e5e4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+  filter: brightness(0.9);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pricing-table {
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-row.total {
+  background: var(--primary);
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.pricing-desc span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.pricing-row.total .pricing-desc span {
+  color: #cbd5e1;
+}
+
+.pricing-price {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pricing-row.total .pricing-price {
+  color: var(--accent-light);
+  font-size: 1.4rem;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 16px 35px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}
+
+.proposal-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+/* Lightbox */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  color: #cbd5e1;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .header { padding: 30px 20px; }
+  .header h1 { font-size: 2rem; }
+  .content { padding: 20px; }
+  .pricing-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .mini-gallery { grid-template-columns: 1fr; }
+  .lightbox-nav { padding: 10px 14px; font-size: 1.2rem; }
+}
+</style>
