@@ -7,10 +7,6 @@
             src="../assets/img/perfilN.jpg"
             alt="imagen de perfil"
           />
-          <!-- <img
-            src="../assets/img/perfil2.jpg"
-            alt="imagen de perfil"
-          /> -->
         </div>
       </div>
       <div class="right">
