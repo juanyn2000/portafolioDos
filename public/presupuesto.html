@@ -51,7 +51,6 @@
         border: 1px solid var(--border);
       }
 
-      /* Header Estiloso */
       .header {
         background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
         color: white;
@@ -84,7 +83,6 @@
         font-weight: 300;
       }
 
-      /* Contenido Principal */
       .content {
         padding: 40px;
       }
@@ -105,7 +103,6 @@
         color: var(--accent);
       }
 
-      /* Grid de Datos Generales */
       .info-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -144,7 +141,6 @@
         font-weight: 600;
       }
 
-      /* Servicios / Cobertura */
       .features-list {
         display: grid;
         grid-template-columns: 1fr;
@@ -159,10 +155,8 @@
         background: #fdfbf7;
         padding: 18px 20px;
         border-radius: 12px;
+        border: 1px solid var(--border);
         border-left: 4px solid var(--accent);
-        border-top: 1px solid var(--border);
-        border-right: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
       }
 
       .feature-item i {
@@ -192,7 +186,6 @@
         margin-bottom: 3px;
       }
 
-      /* Mini Galería por Sección (3 fotos) */
       .mini-gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -219,7 +212,6 @@
         object-fit: cover;
       }
 
-      /* Galería Final Extendida */
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -265,7 +257,6 @@
         font-weight: 500;
       }
 
-      /* Tabla de Inversión */
       .pricing-table {
         background: #f8fafc;
         border-radius: 12px;
@@ -314,7 +305,6 @@
         font-size: 1.4rem;
       }
 
-      /* Botón de Acción Dinámico */
       .actions {
         text-align: center;
         margin-top: 30px;
@@ -329,9 +319,7 @@
         font-weight: 600;
         border-radius: 50px;
         cursor: pointer;
-        transition:
-          background 0.2s ease,
-          transform 0.2s ease;
+        transition: background 0.2s ease, transform 0.2s ease;
         box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.4);
         display: inline-flex;
         align-items: center;
@@ -344,7 +332,6 @@
         transform: translateY(-2px);
       }
 
-      /* Footer de la Propuesta */
       .proposal-footer {
         text-align: center;
         padding: 20px;
@@ -354,7 +341,6 @@
         background: #f8fafc;
       }
 
-      /* Estilos del Modal Lightbox */
       .lightbox-modal {
         display: none;
         position: fixed;
@@ -418,13 +404,8 @@
         background: rgba(255, 255, 255, 0.3);
       }
 
-      .lightbox-prev {
-        left: 20px;
-      }
-
-      .lightbox-next {
-        right: 20px;
-      }
+      .lightbox-prev { left: 20px; }
+      .lightbox-next { right: 20px; }
 
       .lightbox-counter {
         position: absolute;
@@ -437,40 +418,23 @@
       }
 
       @media (max-width: 600px) {
-        .header {
-          padding: 30px 20px;
-        }
-        .header h1 {
-          font-size: 2rem;
-        }
-        .content {
-          padding: 20px;
-        }
-        .pricing-row {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 8px;
-        }
-        .mini-gallery {
-          grid-template-columns: 1fr;
-        }
-        .lightbox-nav {
-          padding: 10px 14px;
-          font-size: 1.2rem;
-        }
+        .header { padding: 30px 20px; }
+        .header h1 { font-size: 2rem; }
+        .content { padding: 20px; }
+        .pricing-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+        .mini-gallery { grid-template-columns: 1fr; }
+        .lightbox-nav { padding: 10px 14px; font-size: 1.2rem; }
       }
     </style>
   </head>
   <body>
     <div class="proposal-container">
-      <!-- Encabezado -->
       <div class="header">
         <h1>Propuesta de Servicios Fotográficos</h1>
         <p>Cobertura Profesional de Graduación Cuarto Medio — Juan Aracena</p>
       </div>
 
       <div class="content">
-        <!-- Datos Generales -->
         <div class="section-title">
           <i class="fa-solid fa-calendar-days"></i> Detalles del Evento
         </div>
@@ -493,10 +457,8 @@
           </div>
         </div>
 
-        <!-- Alcance de la Cobertura -->
         <div class="section-title">
-          <i class="fa-solid fa-camera-retro"></i> Alcance Detallado de la
-          Cobertura
+          <i class="fa-solid fa-camera-retro"></i> Alcance Detallado de la Cobertura
         </div>
 
         <div class="features-list">
@@ -513,23 +475,11 @@
             </div>
           </div>
         </div>
-        <!-- 3 Fotos de muestra para esta sección -->
+        
         <div class="mini-gallery">
-          <div class="mini-gallery-item">
-            <img src="./src/assets/img/DSC_0123.jpg" alt="Entrada" />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC_0201.jpg"
-              alt="Acompañantes"
-            />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC_0168.jpg"
-              alt="Compañeros"
-            />
-          </div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC_0123.jpg" alt="Entrada" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC_0201.jpg" alt="Acompañantes" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC_0168.jpg" alt="Compañeros" /></div>
         </div>
 
         <div class="features-list">
@@ -541,36 +491,18 @@
               <ul>
                 <li>Última lista y nombramiento oficial.</li>
                 <li>Retratos en el escenario con efectos de chispas frías.</li>
-                <li>
-                  Foto panorámica aérea cuando estén todos juntos tras el
-                  nombramiento.
-                </li>
+                <li>Foto panorámica aérea cuando estén todos juntos tras el nombramiento.</li>
                 <li>Fotografías en mesas de invitados y familia.</li>
                 <li>Registro de concursos y premiados de la noche.</li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- 3 Fotos de muestra para esta sección -->
+        
         <div class="mini-gallery">
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC01462.jpg"
-              alt="Escenario"
-            />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC02189.jpg"
-              alt="Mesas"
-            />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC00938.jpg"
-              alt="Premiados"
-            />
-          </div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC01462.jpg" alt="Escenario" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC02189.jpg" alt="Mesas" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC00938.jpg" alt="Premiados" /></div>
         </div>
 
         <div class="features-list">
@@ -582,37 +514,18 @@
               <ul>
                 <li>Fotos del tradicional baile de vals.</li>
                 <li>Cobertura completa de la fiesta y ambiente general.</li>
-                <li>
-                  Extensión de servicio hasta las <strong>02:00 AM</strong> como
-                  límite.
-                </li>
+                <li>Extensión de servicio hasta las <strong>02:00 AM</strong> como límite.</li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- 3 Fotos de muestra para esta sección -->
+        
         <div class="mini-gallery">
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC06430.jpg"
-              alt="Vals"
-            />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC06450.jpg"
-              alt="Fiesta"
-            />
-          </div>
-          <div class="mini-gallery-item">
-            <img
-              src="./src/assets/img/DSC06497.jpg"
-              alt="DJ / Baile"
-            />
-          </div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC06430.jpg" alt="Vals" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC06450.jpg" alt="Fiesta" /></div>
+          <div class="mini-gallery-item"><img src="src/assets/img/DSC06497.jpg" alt="DJ / Baile" /></div>
         </div>
 
-        <!-- Entregables y Plazos -->
         <div class="section-title">
           <i class="fa-solid fa-box-open"></i> Entregables y Plazos
         </div>
@@ -621,160 +534,56 @@
             <i class="fa-solid fa-bolt"></i>
             <div>
               <h4>Avance Express (Teaser)</h4>
-              <p>
-                Set exclusivo de 10 fotografías editadas en alta resolución
-                entregadas en un plazo máximo de
-                <strong>24 horas</strong> post-evento.
-              </p>
+              <p>Set exclusivo de 10 fotografías editadas en alta resolución entregadas en un plazo máximo de <strong>24 horas</strong> post-evento.</p>
             </div>
           </div>
           <div class="feature-item">
             <i class="fa-solid fa-cloud-arrow-down"></i>
             <div>
               <h4>Galería Digital Privada Ilimitada</h4>
-              <p>
-                Todas las fotografías del evento editadas profesionalmente
-                (cantidad ilimitada), en plataforma online privada con descarga
-                gratuita.
-              </p>
+              <p>Todas las fotografías del evento editadas profesionalmente (cantidad ilimitada), en plataforma online privada con descarga gratuita.</p>
             </div>
           </div>
           <div class="feature-item">
             <i class="fa-solid fa-clock"></i>
             <div>
               <h4>Plazo de Entrega Final</h4>
-              <p>
-                Entrega de la galería completa en un plazo máximo de
-                <strong>10 días hábiles</strong> posteriores al evento.
-              </p>
+              <p>Entrega de la galería completa en un plazo máximo de <strong>10 días hábiles</strong> posteriores al evento.</p>
             </div>
           </div>
         </div>
 
-        <!-- Galería Final Extendida -->
         <div class="section-title">
           <i class="fa-solid fa-images"></i> Portafolio y Estilo Visual
         </div>
-        <p
-          style="
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-          "
-        >
-          Una selección ampliada con el estándar de calidad, iluminación y
-          captura de momentos que garantizamos:
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+          Una selección ampliada con el estándar de calidad, iluminación y captura de momentos que garantizamos:
         </p>
 
         <div class="gallery-grid">
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114797.jpg.jpeg"
-              alt="Foto 1"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114798.jpg.jpeg"
-              alt="Foto 2"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114799.jpg.jpeg"
-              alt="Foto 3"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114800.jpg.jpeg"
-              alt="Foto 4"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114801.jpg.jpeg"
-              alt="Foto 5"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114802.jpg.jpeg"
-              alt="Foto 6"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/114803.jpg.jpeg"
-              alt="Foto 7"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0162.jpg"
-              alt="Foto 8"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0027.jpg"
-              alt="Foto 9"
-            />
-            <div class="gallery-overlay"> </div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0070.jpg"
-              alt="Foto 10"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0079.jpg"
-              alt="Foto 11"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0103.jpg"
-              alt="Foto 12"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="./src/assets/img/DSC_0141.jpg"
-              alt="Foto 13"
-            />
-            <div class="gallery-overlay"></div>
-          </div>
+          <div class="gallery-item"><img src="src/assets/img/114797.jpg.jpeg" alt="Foto 1" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114798.jpg.jpeg" alt="Foto 2" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114799.jpg.jpeg" alt="Foto 3" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114800.jpg.jpeg" alt="Foto 4" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114801.jpg.jpeg" alt="Foto 5" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114802.jpg.jpeg" alt="Foto 6" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/114803.jpg.jpeg" alt="Foto 7" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0162.jpg" alt="Foto 8" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0027.jpg" alt="Foto 9" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0070.jpg" alt="Foto 10" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0079.jpg" alt="Foto 11" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0103.jpg" alt="Foto 12" /><div class="gallery-overlay"></div></div>
+          <div class="gallery-item"><img src="src/assets/img/DSC_0141.jpg" alt="Foto 13" /><div class="gallery-overlay"></div></div>
         </div>
 
-        <!-- Desglose de Inversión -->
         <div class="section-title">
-          <i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto e
-          Inversión
+          <i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto e Inversión
         </div>
         <div class="pricing-table">
           <div class="pricing-row">
             <div class="pricing-desc">
-              <strong
-                >Cobertura Fotográfica Integral (Hasta las 02:00 AM)</strong
-              >
-              <span
-                >Entrada, protocolo, escenario, chispas frías, mesas, vals y
-                fiesta</span
-              >
+              <strong>Cobertura Fotográfica Integral (Hasta las 02:00 AM)</strong>
+              <span>Entrada, protocolo, escenario, chispas frías, mesas, vals y fiesta</span>
             </div>
             <div class="pricing-price">$250.000 CLP</div>
           </div>
@@ -801,26 +610,22 @@
           </div>
         </div>
 
-        <!-- Botón de Contacto por WhatsApp -->
         <div class="actions">
           <a
             href="https://wa.me/56948764112?text=Hola%20Juan,%20revisé%20la%20propuesta%20de%20fotografía%20para%20la%20graduación%20y%20quiero%20reservar%20la%20fecha."
             target="_blank"
             class="btn-primary"
           >
-            <i class="fa-brands fa-whatsapp fa-xl"></i> Aceptar Propuesta y
-            Hablar por WhatsApp
+            <i class="fa-brands fa-whatsapp fa-xl"></i> Aceptar Propuesta y Hablar por WhatsApp
           </a>
         </div>
       </div>
 
       <div class="proposal-footer">
-        Propuesta generada por Juan Aracena • Servicios de Fotografía
-        Profesional • Válida por 15 días.
+        Propuesta generada por Juan Aracena • Servicios de Fotografía Profesional • Válida por 15 días.
       </div>
     </div>
 
-    <!-- Estructura del Modal Lightbox -->
     <div class="lightbox-modal" id="lightboxModal">
       <button class="lightbox-close" id="lightboxClose">&times;</button>
       <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
@@ -829,7 +634,6 @@
       <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
     </div>
 
-    <!-- Script para la Galería Modal -->
     <script>
       const allImages = document.querySelectorAll('.mini-gallery-item img, .gallery-item img');
       const modal = document.getElementById('lightboxModal');
@@ -846,7 +650,7 @@
         currentIndex = index;
         updateModalImage();
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+        document.body.style.overflow = 'hidden';
       }
 
       function closeModal() {
@@ -871,29 +675,24 @@
         updateModalImage();
       }
 
-      // Eventos click en las imágenes
       imagesArray.forEach((img, index) => {
         img.addEventListener('click', () => {
           openModal(index);
         });
       });
 
-      // Botones de control del modal
       closeBtn.addEventListener('click', closeModal);
       prevBtn.addEventListener('click', showPrev);
       nextBtn.addEventListener('click', showNext);
 
-      // Cerrar al hacer clic fuera de la imagen
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
           closeModal();
         }
       });
 
-      // Navegación por teclado (Flechas y Escape)
       document.addEventListener('keydown', (e) => {
         if (!modal.classList.contains('active')) return;
-        
         if (e.key === 'Escape') {
           closeModal();
         } else if (e.key === 'ArrowLeft') {
